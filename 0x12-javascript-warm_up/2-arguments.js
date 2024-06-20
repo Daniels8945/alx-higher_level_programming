@@ -1,7 +1,7 @@
 #!/usr/bin/node
 
 const argc = [].length
-if(argc == null){
+if(argc < 1){
 	console.log('No argument');
 }if(argc == 1){
 	console.log('Argument found');
