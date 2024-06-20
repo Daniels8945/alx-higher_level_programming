@@ -1,4 +1,4 @@
-#!/usr.bin/node
+#!/usr/bin/node
 
 const args = process.argv.splice(2);
 
