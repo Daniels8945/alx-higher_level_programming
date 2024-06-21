@@ -2,5 +2,6 @@
 
 const myObject = { type: 'object', value: 12 };
 console.log(myObject);
-myObject.value = 89;
+const myObject1 = {type: 'object', value: 89};
+Object.assign(myObject, myObject1);
 console.log(myObject);
