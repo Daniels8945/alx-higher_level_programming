@@ -1,28 +1,26 @@
 #!/usr/bin/python3
-"""lists all states from the database"""
+""" lists all row from the database """
 import MySQLdb
 import sys
 
 
 if __name__ == "__main__":
-    # Retrive argumnts
-    mysql_username, mysql_password, database_name = sys.argv[1], sys.argv[2], sys.argv[3]
+    # Connect to the MySQL database
+    db = MySQLdb.connect(host="localhost", port=3306,
+            user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3])
 
-    # connect to mysql db
-    db = MySQLdb.connect(host="localhost", port=3306, user=mysql_username,
-            password=mysql_password, db=database_name)
-    
-    # create a cursor object
+    # Create a cursor object
     cursor = db.cursor()
-    
-    # Evecute the query
+
+    # Execute the query
     cursor.execute("SELECT * FROM states ORDER BY id ASC")
 
+    # Fetch all the rows
     rows = cursor.fetchall()
-    
+
+    # Print the rows
     for row in rows:
         print(row)
-
 
     cursor.close()
     db.close()
