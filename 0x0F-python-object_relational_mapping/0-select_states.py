@@ -3,7 +3,7 @@
 import MySQLdb
 import sys
 
-if __name__ == "__name__":
+if __name__ == "__main__":
     mysql_username = sys.argv[1]
     mysql_password = sys.argv[2]
     database_name = sys.argv[3]
@@ -13,7 +13,7 @@ if __name__ == "__name__":
     cursor = db.cursor()
 
 
-    cursor.execute("SELECT * FROM states ORDER id ASC")
+    cursor.execute("SELECT * FROM states ORDER BY id ASC")
 
     rows = cursor.fetchall()
 
