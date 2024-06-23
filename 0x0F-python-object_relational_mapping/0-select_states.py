@@ -1,7 +1,8 @@
 #!/usr/bin/python3
-""" lists all states from the database"""
+"""lists all states from the database"""
 import MySQLdb
 import sys
+
 
 if __name__ == "__main__":
     if len(sys.argv) != 4:
