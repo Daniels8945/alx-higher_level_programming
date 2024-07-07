@@ -4,7 +4,7 @@
 import urllib.request
 
 
-url = urllib.request.Request("https://alx-intranet.hbtn.io/status"
+url = urllib.request.Request("https://alx-intranet.hbtn.io/status")
 
 with urllib.request.urlopen(url) as response:
     body = response.read()
